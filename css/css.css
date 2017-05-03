@@ -100,6 +100,23 @@ body{
 	left: 0px;
 	top: 0px;
 }
+.num p{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 9999;
+}
+.num .lottery_list{
+	width: 1440px;
+	height: 900px;
+
+	margin: 0px auto 0px;
+	z-index: 9998;
+}
+.num .lottery_list img{
+
+}
 .winner{
 	z-index: 9999;
 

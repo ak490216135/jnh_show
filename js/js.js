@@ -76,19 +76,22 @@ $('docment').ready(function(){
 
 	// 倒计时
 	function countdown(){
+		// 
+		show_lottery(id);
 		// 批量清除之前的倒计时
 		for (var i = st_num.length - 1; i >= 0; i--) {
 			clearTimeout(st_num[i]);
 		}
 		var num = 5;
 		$('.num').fadeIn();
-		$('.num').text(num);
+		$('.num p').text(num);
 		num--;
-		st_num[1] = setTimeout(function(){$('.num').text(num);num--;}, 1000);
-		st_num[2] = setTimeout(function(){$('.num').text(num);num--;}, 2000);
-		st_num[3] = setTimeout(function(){$('.num').text(num);num--;}, 3000);
+		// 倒计时
+		st_num[1] = setTimeout(function(){$('.num p').text(num);num--;}, 1000);
+		st_num[2] = setTimeout(function(){$('.num p').text(num);num--;}, 2000);
+		st_num[3] = setTimeout(function(){$('.num p').text(num);num--;}, 3000);
 		st_num[4] = setTimeout(function(){
-			$('.num').text(num);
+			$('.num p').text(num);
 			// 隐藏倒数
 			$('.num').fadeOut();
 			// 最后的倒计时结束
@@ -97,6 +100,12 @@ $('docment').ready(function(){
 				start_lottery();
 			}
 		}, 4000);
+	}
+
+	// 设置显示抽奖奖品
+	function show_lottery(lottery_id){
+		$('.num .lottery_list img').hide();
+		$('.num .lottery_list .lottery_' + lottery_id).show();
 	}
 
 	// 抽奖过程
