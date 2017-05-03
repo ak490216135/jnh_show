@@ -41,7 +41,7 @@ $('docment').ready(function(){
 	$(document).on('click', '.start_lottery', function(){
 		console.log('点击开始抽奖');
 		// 隐藏抽奖按钮
-		$('.lottery').fadeOut();
+		//$('.lottery').fadeOut();
 		// 隐藏中奖弹出层
 		$('.winner').fadeOut();
 		// 设置公共请求类型id
@@ -52,6 +52,8 @@ $('docment').ready(function(){
 		$('.jump').html('');
 		// 展示抽奖奖品
 		show_lottery(id);
+		// 隐藏按钮
+		hide_all_btn();
 		// 奖品图片被点击后才开始倒计时
 		$('.num').click(function(){
 			// 开始倒计时
@@ -100,6 +102,8 @@ $('docment').ready(function(){
 			$('.num').fadeOut();
 			// 最后的倒计时结束
 			if(continue_lottery == 1){
+				// 只显示停止按钮
+				show_stop_btn();
 				// 倒计时结束开始抽奖
 				start_lottery();
 			}
@@ -109,7 +113,7 @@ $('docment').ready(function(){
 	// 设置显示抽奖奖品
 	function show_lottery(lottery_id){
 		$('.num .lottery_list img').hide();
-		$('.num .lottery_list .lottery_' + lottery_id).show();
+		$('.num .lottery_list .lottery_prize_' + lottery_id).show();
 		$('.num').fadeIn();
 		$('.num p').hide();
 	}
@@ -154,7 +158,7 @@ $('docment').ready(function(){
 		// 清空弹出人头像区域
 		$('.winner_list').html('');
 		// 显示中奖信息
-		$('.lottery').fadeIn();
+		//$('.lottery').fadeIn();
 		// 显示中奖人列表
 		$('.winner').fadeIn();
 		// 设置奖品等级背景
@@ -171,6 +175,26 @@ $('docment').ready(function(){
 		   		}
 		   	}
 		});
+
+		// 显示抽奖按钮
+		show_lottery_btn();
+	}
+
+	// 隐藏所有按钮
+	function hide_all_btn(){
+		$('.lottery_button .lottery_button_bldy div').hide();
+	}
+
+	// 显示抽奖按钮
+	function show_lottery_btn(){
+		$('.lottery_button .lottery_button_bldy div').hide();
+		$('.lottery_button .lottery_button_bldy .start_lottery').fadeIn();
+	}
+
+	// 显示结束按钮
+	function show_stop_btn(){
+		$('.lottery_button .lottery_button_bldy div').hide();
+		$('.lottery_button .lottery_button_bldy .end_lottery').fadeIn();
 	}
 
 	// 结束活动
