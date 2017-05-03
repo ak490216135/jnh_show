@@ -50,8 +50,13 @@ $('docment').ready(function(){
 		continue_lottery = 1;
 		// 清空显示区域
 		$('.jump').html('');
-		// 开始倒计时
-		countdown();
+		// 展示抽奖奖品
+		show_lottery(id);
+		// 奖品图片被点击后才开始倒计时
+		$('.num').click(function(){
+			// 开始倒计时
+			countdown();
+		});
 	});
 
 	// 手动停止抽奖
@@ -76,14 +81,13 @@ $('docment').ready(function(){
 
 	// 倒计时
 	function countdown(){
-		// 
-		show_lottery(id);
 		// 批量清除之前的倒计时
 		for (var i = st_num.length - 1; i >= 0; i--) {
 			clearTimeout(st_num[i]);
 		}
+		$('.num .lottery_list img').hide();
 		var num = 5;
-		$('.num').fadeIn();
+		$('.num p').show();
 		$('.num p').text(num);
 		num--;
 		// 倒计时
@@ -96,7 +100,7 @@ $('docment').ready(function(){
 			$('.num').fadeOut();
 			// 最后的倒计时结束
 			if(continue_lottery == 1){
-				// 开始抽奖
+				// 倒计时结束开始抽奖
 				start_lottery();
 			}
 		}, 4000);
@@ -106,6 +110,8 @@ $('docment').ready(function(){
 	function show_lottery(lottery_id){
 		$('.num .lottery_list img').hide();
 		$('.num .lottery_list .lottery_' + lottery_id).show();
+		$('.num').fadeIn();
+		$('.num p').hide();
 	}
 
 	// 抽奖过程
@@ -143,9 +149,15 @@ $('docment').ready(function(){
 	// 展示中奖名单
 	function show_lottery_list(){
 		console.log('开始展示中奖人名单');
+		// 隐藏中奖奖品展示和倒计时
+		$('.num').hide();
+		// 清空弹出人头像区域
 		$('.winner_list').html('');
+		// 显示中奖信息
 		$('.lottery').fadeIn();
+		// 显示中奖人列表
 		$('.winner').fadeIn();
+		// 设置奖品等级背景
 		$('.page').attr('class', 'page main-' + id);
 		// 请求数据
 		$.ajax({
