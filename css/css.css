@@ -9,6 +9,18 @@ body{
 	width: 100%;
 	height: 100%;
 }
+/* 大图片预加载区 */
+/* body{background: url('../imgs/bg.jpg') no-repeat -999999999px -999999999px;}
+body{background: url('../imgs/lottery_0.jpg') no-repeat -999999999px -999999999px;}
+body{background: url('../imgs/lottery_1.jpg') no-repeat -999999999px -999999999px;}
+body{background: url('../imgs/lottery_2.jpg') no-repeat -999999999px -999999999px;}
+body{background: url('../imgs/lottery_3.jpg') no-repeat -999999999px -999999999px;}
+body{background: url('../img/img-01.png') no-repeat -999999999px -999999999px;}
+body{background: url('../img/img-02.png') no-repeat -999999999px -999999999px;}
+body{background: url('../img/img-03.png') no-repeat -999999999px -999999999px;}
+body{background: url('../img/img-04.png') no-repeat -999999999px -999999999px;} */
+
+
 .main{
 	width: 100%;
 	height: 100%;
@@ -112,8 +124,8 @@ body{
 	display: none;
 }
 .num .lottery_list{
-	width: 1440px;
-	height: 900px;
+	width: 1920px;
+	height: 1200px;
 
 	margin: 0px auto 0px;
 	z-index: 9998;

@@ -39,10 +39,10 @@ li span{ display:inline-block; margin-left:10px; width:100px; overflow: hidden; 
 /*特等奖*/
 .main-0{  background:url(../img/bg.png) no-repeat center center; }
 .main-0 .center{ overflow-y:visible}
-.main-0 li{ width:100%; font-size:24px; height:300px; text-align:center; margin:10px 0 0}
+.main-0 li{ width:1572px; font-size:24px; height:125px; text-align:center; margin:10px 0 0}
 /*.main-0 .wax{ margin-top:20px;}*/
-.main-0 li img { border-radius:100%; width:135px;}
-.main-0 li span{ display:block; width:100%; text-align: center; overflow:hidden}
+.main-0 li img { border-radius:96px; width:135px;}
+.main-0 li span{ display:inline-block; margin-left:10px; width:200px; overflow:hidden}
 
 
 
