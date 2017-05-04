@@ -55,7 +55,7 @@ $('docment').ready(function(){
 		// 隐藏按钮
 		hide_all_btn();
 		// 奖品图片被点击后才开始倒计时
-		$('.num').click(function(){
+		$('.lottery_list').unbind().click(function(){
 			// 开始倒计时
 			countdown();
 		});
@@ -64,14 +64,14 @@ $('docment').ready(function(){
 	// 手动停止抽奖
 	$(document).on('click', '.end_lottery', function(){
 		continue_lottery = 0;
+		// 清空显示区域
+		$('.jump').html('');
 		// 停止请求数据
 		clearTimeout(st);
 		// 批量清除追加dom st
 		for (var i = st_list.length - 1; i >= 0; i--) {
 			clearTimeout(st_list[i]);
 		}
-		// 清空显示区域
-		$('.jump').html('');
 		// 展示中奖人名单
 		show_lottery_list();
 	});
@@ -79,6 +79,13 @@ $('docment').ready(function(){
 	// 手动结束活动
 	$(document).on('click', '.end', function(){
 		end();
+	});
+
+	// 点击结束画面
+	$(document).on('click', '.winner',function(){
+		$('.winner').fadeOut();
+		$('.winner_list').html('');
+		show_lottery_btn();
 	});
 
 	// 倒计时
@@ -139,10 +146,9 @@ $('docment').ready(function(){
 		   		}*/
 		   		for (var i = show_list.length - 1; i >= 0; i--) {
 		   			st_list[i] = setTimeout(function(){
-	   					console.log(k);
-	   					k++;
-	   					if(k > (count - 1)){k = 1}
+	   					//console.log(k);
 		   				$('.jump').append('<div class="man" style="-webkit-animation:man_top_' + Math.round(Math.random()*4) + ' 3s 1 ease, man_left_' + Math.round(Math.random()*14) + ' 3s 1 ease;"><img src="' + show_list[k].head_imgurl + '"/></div>');
+	   					k++;
 	   				},Math.round(Math.random() * time_interval) );
 		   		}
 		   	}
@@ -177,7 +183,7 @@ $('docment').ready(function(){
 		});
 
 		// 显示抽奖按钮
-		show_lottery_btn();
+		hide_all_btn();
 	}
 
 	// 隐藏所有按钮
