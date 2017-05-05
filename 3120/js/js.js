@@ -17,10 +17,10 @@ var time_interval = 2000;
 // 每次数量
 var count = 20;
 // 跳动显示中奖人地址
-//var jump_url = "./GetShakeActivityServlet.php";
+//var jump_url = "./1920/GetShakeActivityServlet.php";
 var jump_url = "servlet/GetShakeActivityServlet";
 // 列表显示中奖人地址
-//var list_url = "./GetListOfWinnersServlet.php";
+//var list_url = "./1920/GetListOfWinnersServlet.php";
 var list_url = "servlet/GetListOfWinnersServlet";
 
 $('docment').ready(function(){

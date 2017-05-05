@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+a{ color:#444444; text-decoration:none;}
+a:hover{ color:#000;text-decoration:none;}
+li{ list-style:none; float:left;}
+body{ font-family:"微软雅黑"; font-size:12px; background:#f3f3f4;color:#333; position:relative; overflow:-Scroll;overflow-y:hidden}
+textarea{ resize:none;  height:auto; width:90px; vertical-align:top;}
+select{ height:24px;}
+input{ outline:none; }
+/*公共样式*/
+
+/*中奖结果展示*/    
+.page{ width:1440px; height:900px; background:url(../img/img-02.png) no-repeat center center; margin:0 auto; position:relative;
+}
+.center{ width:1007px; height:409px;overflow-y:auto; position:absolute; left:16%; top:43%;}
+ul{ overflow:hidden}
+li{ margin-left:18px; margin-bottom:20px; font-size:16px; width:175px; height:60px; line-height: 60px;}
+li img{ border-radius:76px;}
+li span{ display:inline-block; margin-left:10px; width:100px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis; }
+
+/*谢谢参与*/    
+.main-bg{ width:1024px; height:768px; background:url(../img/bg-1.png) no-repeat center center; margin:0 auto;}
+
+/*一等奖*/
+.main-1 li{  text-align:center; margin-left:128px; margin-top:20px;}
+.main-1 li img{ width:65px;}
+.main-1 .center{ height:409px; overflow-y:visible}
+
+/*二等奖*/
+.main-2{  background:url(../img/img-03.png) no-repeat center center; }
+
+/*三等奖*/
+.main-3{  background:url(../img/img-04.png) no-repeat center center; }
+
+/*特等奖*/
+.main-0{  background:url(../img/img-01.png) no-repeat center center; }
+.main-0 .center{ overflow-y:visible; position:absolute; left:11%; top:43%;}
+.main-0 li{ width:1156px; font-size:22px; height:185px; text-align:center; margin:10px 0 0}
+.main-0 .wax{ margin-top:20px;}
+.main-0 li img { border-radius:76px; width:105px;}
+.main-0 li span{ display:block; margin:15px auto 0px; width:200px; overflow:hidden}
+
+
+/*关闭按钮*/
+.close{ position:absolute; top:314px; left:1216px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
