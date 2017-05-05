@@ -44,6 +44,8 @@ li span{ display:inline-block; margin-left:10px; width:100px; overflow: hidden; 
 .main-0 li img { border-radius:96px; width:135px;}
 .main-0 li span{ display:inline-block; margin-left:10px; width:200px; overflow:hidden}
 
+/*关闭按钮*/
+.close{ position:absolute; top:446px; left:1710px;}
 
 
 

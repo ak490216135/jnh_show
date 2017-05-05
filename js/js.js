@@ -82,7 +82,7 @@ $('docment').ready(function(){
 	});
 
 	// 点击结束画面
-	$(document).on('click', '.winner',function(){
+	$(document).on('click', '.close',function(){
 		$('.winner').fadeOut();
 		$('.winner_list').html('');
 		show_lottery_btn();

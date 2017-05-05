@@ -44,7 +44,7 @@ li span{ display:inline-block; margin-left:10px; width:100px; overflow: hidden; 
 .main-0 li img { border-radius:100%; width:135px;}
 .main-0 li span{ display:block; width:100%; text-align: center; overflow:hidden}
 
-
+.close{ position:absolute; top:446px; left:1710px;}
 
 
 
