@@ -13,7 +13,7 @@ input{ outline:none; }
 /*公共样式*/
 
 /*中奖结果展示*/    
-.page{ width:1920px; height:1200px; background:url(../img/bg-01.png) no-repeat center center; margin:0 auto; position:relative;
+.page{ width:1920px; height:1200px; background:url(../img/bg-01.jpg) no-repeat center center; margin:0 auto; position:relative;
 }
 .center{ width:1539px; height:540px;overflow-y:scroll; position:absolute; left:10%; top:46%;}
 ul{ overflow:hidden}
@@ -22,7 +22,7 @@ li img{ border-radius:76px;}
 li span{ display:inline-block; margin-left:10px; width:100px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis; }
 
 /*谢谢参与*/    
-.main-bg{ width:1920px; height:1200px; background:url(../img/bg-1.png) no-repeat center center; margin:0 auto;}
+.main-bg{ width:1920px; height:1200px; background:url(../img/bg-1.jpg) no-repeat center center; margin:0 auto;}
 
 /*一等奖*/
 .main-1 li{ width:410px; height:96px;text-align:center; margin-left:76px; line-height:86px; margin-top:20px;}
@@ -31,13 +31,13 @@ li span{ display:inline-block; margin-left:10px; width:100px; overflow: hidden; 
 
 
 /*二等奖*/
-.main-2{  background:url(../img/bg-02.png) no-repeat center center; }
+.main-2{  background:url(../img/bg-02.jpg) no-repeat center center; }
 
 /*三等奖*/
-.main-3{  background:url(../img/bg-03.png) no-repeat center center; }
+.main-3{  background:url(../img/bg-03.jpg) no-repeat center center; }
 
 /*特等奖*/
-.main-0{  background:url(../img/bg.png) no-repeat center center; }
+.main-0{  background:url(../img/bg.jpg) no-repeat center center; }
 .main-0 .center{ overflow-y:visible}
 .main-0 li{ width:100%; font-size:24px; height:300px; text-align:center; margin:10px 0 0}
 /*.main-0 .wax{ margin-top:20px;}*/
