@@ -2,6 +2,10 @@
 var show_list;
 // 计数器
 var k;
+// 每次抽奖统计数
+var jump_num = 0;
+// 每次抽奖清理统计数
+var clear_num = 0;
 // setTimeout
 var st;
 // 延迟显示倒计时
@@ -83,6 +87,10 @@ $('docment').ready(function(){
 
 	// 点击结束画面
 	$(document).on('click', '.close',function(){
+		// 重置跳出统计
+		jump_num = 0;
+		// 重置跳出清理统计
+		clear_num = 0;
 		$('.winner').fadeOut();
 		$('.winner_list').html('');
 		show_lottery_btn();
@@ -146,13 +154,26 @@ $('docment').ready(function(){
 		   		}*/
 		   		for (var i = show_list.length - 1; i >= 0; i--) {
 		   			st_list[i] = setTimeout(function(){
-	   					//console.log(k);
-		   				$('.jump').append('<div class="man" style="-webkit-animation:man_top_' + Math.round(Math.random()*4) + ' 3s 1 ease, man_left_' + Math.round(Math.random()*14) + ' 3s 1 ease;"><img src="' + show_list[k].head_imgurl + '"/></div>');
+	   					//console.log(jump_num);
+		   				$('.jump').append('<div class="man jump_' + jump_num + '" style="-webkit-animation:man_top_' + Math.round(Math.random()*4) + ' 3s 1 ease, man_left_' + Math.round(Math.random()*14) + ' 3s 1 ease;"><img src="' + show_list[k].head_imgurl + '"/></div>');
 	   					k++;
+	   					jump_num++;
 	   				},Math.round(Math.random() * time_interval) );
 		   		}
 		   	}
 		});
+		// 清除过期弹出dom
+		setTimeout(function(){
+			// 执行了清理
+			console.log('开始清理过期的跳出头像');
+			if(jump_num > 40){
+				for (var i = clear_num; i < jump_num - 20; i++) {
+					console.log('清理了' + clear_num);
+					$('.jump_' + clear_num).remove();
+					clear_num ++;
+				}
+			}
+		}, time_interval + 2000);
 		st = setTimeout(start_lottery, time_interval);
 	}
 
